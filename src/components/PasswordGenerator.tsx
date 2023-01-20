@@ -5,8 +5,14 @@ import CheckBoxes from './CheckBoxes'
 import Strenght from './Strenght'
 
 const PasswordGenerator = () => {
-  const [password, setPassword] = useState('ad12e1nkj1f1')
-  const [length, setLength] = useState(0)
+  const [password, setPassword] = useState('Generate a password')
+  const [length, setLength] = useState(8)
+  const [options, setOptions] = useState([
+    { name: 'Lowercase', value: true },
+    { name: 'Uppercase', value: true },
+    { name: 'Numbers', value: true },
+    { name: 'Symbols', value: true },
+  ])
   return (
     <div className='w-[500px] flex flex-col gap-8'>
       <h1 className='text-zinc-400 text-xl text-center font-semibold'>
@@ -29,7 +35,12 @@ const PasswordGenerator = () => {
         <Slider />
         <CheckBoxes />
         <Strenght />
-        <div>
+        <div
+          className='bg-green-300 p-4 flex items-center justify-center gap-4 text-zinc-900 font-bold'
+          onClick={() => {
+            setPassword(Math.random().toString(36).slice(-length))
+          }}
+        >
           <button>GENERATE</button>
           <AiOutlineArrowRight />
         </div>
