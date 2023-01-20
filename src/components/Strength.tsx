@@ -2,21 +2,21 @@ interface Props {
   options: { name: string; value: boolean; characters: string }[]
 }
 
-const Strenght = ({ options }: Props) => {
-  let strenght = 0
+const Strength = ({ options }: Props) => {
+  let strength = 0
   for (let i = 0; i < options.length; i++) {
     if (options[i].value === true) {
-      strenght++
+      strength++
     }
   }
   let bg = ''
-  if (strenght === 1) bg = 'bg-green-300'
-  if (strenght === 2) bg = 'bg-yellow-300'
-  if (strenght === 3) bg = 'bg-orange-400'
-  if (strenght === 4) bg = 'bg-red-600'
+  if (strength === 1) bg = 'bg-green-300'
+  if (strength === 2) bg = 'bg-yellow-300'
+  if (strength === 3) bg = 'bg-orange-400'
+  if (strength === 4) bg = 'bg-red-600'
   return (
     <div className='flex justify-between items-center bg-zinc-900 p-6 font-bold text-zinc-500'>
-      <p>STRENGHT</p>
+      <p>STRENGTH</p>
       <div className='flex gap-2'>
         {options.map((option, index) => {
           return (
@@ -31,4 +31,4 @@ const Strenght = ({ options }: Props) => {
   )
 }
 
-export default Strenght
+export default Strength

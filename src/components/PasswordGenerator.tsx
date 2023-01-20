@@ -1,8 +1,9 @@
 import { useState } from 'react'
+
+import PasswordText from './PasswordText'
 import Slider from './Slider'
 import CheckBoxes from './CheckBoxes'
-import Strenght from './Strenght'
-import PasswordText from './PasswordText'
+import Strength from './Strength'
 import GenerateButton from './GenerateButton'
 
 const PasswordGenerator = () => {
@@ -38,7 +39,7 @@ const PasswordGenerator = () => {
           options={options}
           setOptions={setOptions}
         />
-        <Strenght options={options} />
+        <Strength options={options} />
         <GenerateButton
           setPassword={setPassword}
           options={options}
