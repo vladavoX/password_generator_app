@@ -14,10 +14,6 @@ const GenerateButton = ({ setPassword, options, length }: Props) => {
         let password = ''
         let characters = ''
         for (let i = 0; i < options.length; i++) {
-          if (options[i].value === false) {
-            setPassword('Please select at least one option')
-            return
-          }
           if (options[i].value === true) {
             characters += options[i].characters
           }

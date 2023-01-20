@@ -10,14 +10,14 @@ const PasswordGenerator = () => {
   const [length, setLength] = useState(8)
   const [options, setOptions] = useState([
     {
-      name: 'Lowercase',
-      value: true,
-      characters: 'abcdefghijklmnopqrstuvwxyz',
-    },
-    {
       name: 'Uppercase',
       value: true,
       characters: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+    },
+    {
+      name: 'Lowercase',
+      value: true,
+      characters: 'abcdefghijklmnopqrstuvwxyz',
     },
     { name: 'Numbers', value: true, characters: '0123456789' },
     { name: 'Symbols', value: true, characters: '!@#$%^&*()_+' },
@@ -28,13 +28,16 @@ const PasswordGenerator = () => {
         Password Generator
       </h1>
       <PasswordText password={password} />
-      <div className='bg-zinc-800 p-6 flex flex-col gap-4'>
+      <div className='bg-zinc-800 p-6 flex flex-col gap-4 text-zinc-200 font-medium'>
         <div className='flex justify-between items-center'>
           <p className='text-lg'>Character Length</p>
           <p className='text-green-300 text-2xl'>{length}</p>
         </div>
         <Slider />
-        <CheckBoxes />
+        <CheckBoxes
+          options={options}
+          setOptions={setOptions}
+        />
         <Strenght />
         <GenerateButton
           setPassword={setPassword}
