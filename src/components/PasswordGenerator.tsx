@@ -23,12 +23,12 @@ const PasswordGenerator = () => {
     { name: 'Symbols', value: true, characters: '!@#$%^&*()_+' },
   ])
   return (
-    <div className='w-[500px] flex flex-col gap-8'>
+    <div className='w-[500px] flex flex-col gap-6'>
       <h1 className='text-zinc-400 text-xl text-center font-semibold'>
         Password Generator
       </h1>
       <PasswordText password={password} />
-      <div className='bg-zinc-800 p-6 flex flex-col gap-4 text-zinc-200 font-medium'>
+      <div className='bg-zinc-800 p-6 flex flex-col gap-6 text-zinc-200 font-medium'>
         <div className='flex justify-between items-center'>
           <p className='text-lg'>Character Length</p>
           <p className='text-green-300 text-2xl'>{length}</p>
@@ -38,7 +38,7 @@ const PasswordGenerator = () => {
           options={options}
           setOptions={setOptions}
         />
-        <Strenght />
+        <Strenght options={options} />
         <GenerateButton
           setPassword={setPassword}
           options={options}
