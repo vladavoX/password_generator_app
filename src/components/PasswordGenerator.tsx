@@ -7,8 +7,8 @@ import Strength from './Strength'
 import GenerateButton from './GenerateButton'
 
 const PasswordGenerator = () => {
-  const [password, setPassword] = useState('Generate a password')
-  const [length, setLength] = useState(8)
+  const [password, setPassword] = useState('Generate password')
+  const [length, setLength] = useState(0)
   const [options, setOptions] = useState([
     {
       name: 'Uppercase',
@@ -28,13 +28,17 @@ const PasswordGenerator = () => {
       <h1 className='text-zinc-400 text-xl text-center font-semibold'>
         Password Generator
       </h1>
-      <PasswordText password={password} />
+      <PasswordText
+        password={password}
+        length={length}
+        options={options}
+      />
       <div className='bg-zinc-800 p-6 flex flex-col gap-6 text-zinc-200 font-medium'>
         <div className='flex justify-between items-center'>
           <p className='text-lg'>Character Length</p>
           <p className='text-green-300 text-2xl'>{length}</p>
         </div>
-        <Slider />
+        <Slider setLength={setLength} />
         <CheckBoxes
           options={options}
           setOptions={setOptions}
