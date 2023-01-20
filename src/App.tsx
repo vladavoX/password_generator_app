@@ -2,7 +2,7 @@ import PasswordGenerator from './components/PasswordGenerator'
 
 function App() {
   return (
-    <div className='min-h-screen flex justify-center items-center'>
+    <div className='bg-zinc-900 min-h-screen flex justify-center items-center'>
       <PasswordGenerator />
     </div>
   )
