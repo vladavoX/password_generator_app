@@ -1,6 +1,6 @@
 ### #50ProjectsChallenge
 
-# Password Generator App
+# Project 01: Password Generator App
 
 ### This is Password Generator, used to generate passwords up to 16 characters.
 
@@ -9,5 +9,7 @@
 3. run `npm install`
 4. run `npm run dev`
 
-### When done setting up the project, select desired length and include options that you want.
-### Click GENERATE and get your password!
+When done setting up the project, select desired length and include options that you want. <br>
+Click GENERATE and get your password!
+
+### Next Project 02 ➡ https://github.com/vladavoX/interactive_card_details_form
